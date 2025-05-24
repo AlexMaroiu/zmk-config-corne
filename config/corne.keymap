@@ -59,10 +59,19 @@
 
         layer_3 {
             bindings = <
-&trans      &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_SEL 4    &trans  &kp CAPSLOCK     &trans  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &trans  &kp PRINTSCREEN  &trans  &trans  &trans  &trans
-&trans      &trans         &trans         &bt BT_PRV     &bt BT_NXT     &trans          &trans  &trans           &trans  &trans  &trans  &trans
+&trans      &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_SEL 4    &trans  &kp CAPSLOCK     &trans  &trans  &trans          &trans
+&bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &trans  &kp PRINTSCREEN  &trans  &trans  &trans          &trans
+&trans      &trans         &trans         &bt BT_PRV     &bt BT_NXT     &trans          &trans  &trans           &trans  &trans  &studio_unlock  &trans
                                           &trans         &trans         &trans          &trans  &trans           &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
@@ -71,6 +80,7 @@
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
         tri_layer {
             if-layers = <1 2>;
             then-layer = <3>;

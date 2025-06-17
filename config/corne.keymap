@@ -16,6 +16,11 @@
             bindings = <&kp F11>;
             key-positions = <3 4 38>;
         };
+
+        enter_combo {
+            bindings = <&kp RET>;
+            key-positions = <16 15>;
+        };
     };
 
     keymap {

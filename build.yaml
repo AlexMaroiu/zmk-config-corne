@@ -17,10 +17,11 @@
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
 #     artifact-name: corne_left_with_studio
 #
+#  now the nice_nano_v2 doesnt exist and nice_nano is default to version 1, if i want to point to version one must be written: nice_nano@1.0.0
+
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: corne_left
-    # snippet: studio-rpc-usb-uart
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: corne_right
